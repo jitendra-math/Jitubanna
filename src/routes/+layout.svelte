@@ -2,6 +2,7 @@
 
 <script>
   import { onMount } from "svelte";
+  import { browser } from "$app/environment";
 
   import Header from "$layout/Header.svelte";
   import Footer from "$layout/Footer.svelte";
@@ -16,6 +17,8 @@
   let lenis;
 
   onMount(() => {
+    if (!browser) return;
+
     theme.initTheme();
 
     lenis = new Lenis({
@@ -50,7 +53,6 @@
 <style>
   .app-root {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
   }
