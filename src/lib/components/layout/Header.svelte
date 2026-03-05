@@ -12,7 +12,7 @@
   import { theme } from "../../stores/theme";
   import { Sun, Moon } from "lucide-svelte";
 
-  export let title = "jitubanna.in";
+  export let title = "Jitendra Singh";
 
   let currentTheme = "dark";
   let scrolled = false;
