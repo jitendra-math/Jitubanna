@@ -17,18 +17,19 @@
   .container {
     width: 100%;
     position: relative;
+    box-sizing: border-box;
   }
 
   /* -------------------------------------------------------------------------- */
-  /*                                WIDTH MODES                                 */
+  /* WIDTH MODES                                                                */
   /* -------------------------------------------------------------------------- */
 
   .container-mobile {
-    max-width: var(--container-max);
+    max-width: 1200px;
   }
 
   .container-tablet {
-    max-width: 768px;
+    max-width: 900px;
   }
 
   .container-full {
@@ -36,7 +37,7 @@
   }
 
   /* -------------------------------------------------------------------------- */
-  /*                                CENTERING                                   */
+  /* CENTERING                                                                  */
   /* -------------------------------------------------------------------------- */
 
   .container-center {
@@ -45,32 +46,33 @@
   }
 
   /* -------------------------------------------------------------------------- */
-  /*                                PADDING                                     */
+  /* PADDING                                                                    */
   /* -------------------------------------------------------------------------- */
 
   .container-padding {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* -------------------------------------------------------------------------- */
-  /*                         MOBILE-FIRST TUNING                                */
+  /* MOBILE                                                                     */
   /* -------------------------------------------------------------------------- */
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     .container-padding {
-      padding-left: 14px;
-      padding-right: 14px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
 
   /* -------------------------------------------------------------------------- */
-  /*                         WIDER SCREENS CONTROL                              */
+  /* SMALL MOBILE                                                               */
   /* -------------------------------------------------------------------------- */
 
-  @media (min-width: 1024px) {
-    .container-mobile {
-      max-width: 520px;
+  @media (max-width: 420px) {
+    .container-padding {
+      padding-left: 14px;
+      padding-right: 14px;
     }
   }
 </style>
