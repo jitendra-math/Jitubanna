@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
 
+  "engines": {
+    "node": "20.x"
+  },
+
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
