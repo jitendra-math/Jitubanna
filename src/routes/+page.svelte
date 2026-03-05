@@ -1,5 +1,9 @@
 <!-- src/routes/+page.svelte -->
 
+<script context="module">
+  export const ssr = false;
+</script>
+
 <script>
   import Container from "$layout/Container.svelte";
 
