@@ -42,19 +42,4 @@
 
 </div>
 
-<style>
-  .home-page {
-    position: relative;
-    width: 100%;
-  }
-
-  .home-page :global(section) {
-    margin-top: 72px;
-  }
-
-  @media (max-width: 480px) {
-    .home-page :global(section) {
-      margin-top: 60px;
-    }
-  }
-</style>
+<!-- style block completely removed – ab koi extra margin nahi -->
