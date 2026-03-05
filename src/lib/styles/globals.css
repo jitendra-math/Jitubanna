@@ -1,0 +1,241 @@
+/* src/lib/styles/globals.css */
+
+@import "./theme.css";
+@import "./typography.css";
+
+/* -------------------------------------------------------------------------- */
+/*                                  RESET                                     */
+/* -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  transition: background var(--transition-normal) var(--easing),
+              color var(--transition-normal) var(--easing);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 ROOT APP                                   */
+/* -------------------------------------------------------------------------- */
+
+#app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           MOBILE FIRST LAYOUT                              */
+/* -------------------------------------------------------------------------- */
+
+.app-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.section-wrapper {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              IMAGE HANDLING                                */
+/* -------------------------------------------------------------------------- */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                BUTTON RESET                                */
+/* -------------------------------------------------------------------------- */
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               INPUT RESET                                  */
+/* -------------------------------------------------------------------------- */
+
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                LIST RESET                                  */
+/* -------------------------------------------------------------------------- */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             LUXURY SCROLL FEEL                             */
+/* -------------------------------------------------------------------------- */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              SELECTION STYLE                               */
+/* -------------------------------------------------------------------------- */
+
+::selection {
+  background: rgba(124, 92, 255, 0.35);
+  color: white;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              FOCUS STATES                                  */
+/* -------------------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid rgba(124, 92, 255, 0.6);
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           MOBILE TAP IMPROVEMENTS                          */
+/* -------------------------------------------------------------------------- */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           SAFE AREA SUPPORT                                */
+/* -------------------------------------------------------------------------- */
+
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           UTILITY SPACING                                  */
+/* -------------------------------------------------------------------------- */
+
+.mt-sm { margin-top: 8px; }
+.mt-md { margin-top: 16px; }
+.mt-lg { margin-top: 32px; }
+
+.mb-sm { margin-bottom: 8px; }
+.mb-md { margin-bottom: 16px; }
+.mb-lg { margin-bottom: 32px; }
+
+/* -------------------------------------------------------------------------- */
+/*                              FLEX UTILITIES                                */
+/* -------------------------------------------------------------------------- */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              GRID UTILITIES                                */
+/* -------------------------------------------------------------------------- */
+
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             GLASS CONTAINER                                */
+/* -------------------------------------------------------------------------- */
+
+.glass-container {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           TRANSITION UTILITY                               */
+/* -------------------------------------------------------------------------- */
+
+.transition {
+  transition: all var(--transition-fast) var(--easing);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            HOVER LIFT EFFECT                               */
+/* -------------------------------------------------------------------------- */
+
+.hover-lift {
+  transition: transform var(--transition-fast) var(--easing),
+              box-shadow var(--transition-fast) var(--easing);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
