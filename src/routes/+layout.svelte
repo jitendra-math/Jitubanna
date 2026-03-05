@@ -12,14 +12,15 @@
 
   import "$styles/globals.css";
 
-  import Lenis from "lenis";
-
   let lenis;
 
-  onMount(() => {
+  onMount(async () => {
     if (!browser) return;
 
     theme.initTheme();
+
+    const LenisModule = await import("lenis");
+    const Lenis = LenisModule.default;
 
     lenis = new Lenis({
       duration: 1.1,
