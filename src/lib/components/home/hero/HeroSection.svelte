@@ -31,7 +31,7 @@
     position: relative;
     overflow: hidden;
 
-    padding-top: 72px;
+    padding-top: 57px;
     padding-bottom: 72px;
 
     min-height: 70vh;
@@ -39,7 +39,11 @@
     display: flex;
     align-items: center;
   }
-
+@media (max-width: 480px) {
+  .hero-section {
+    padding-top: 40px;
+  }
+}
   .hero-inner {
     position: relative;
     z-index: 2;
