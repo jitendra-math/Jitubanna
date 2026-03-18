@@ -1,50 +1,53 @@
-
-
 <script>
 </script>
 
 <div class="wrapper">
 
-  <div class="glow"></div>
+  <!-- BACKGROUND -->
+  <div class="bg-gradient"></div>
 
   <div class="card">
 
+    <div class="badge">🚧 Work in Progress</div>
+
     <h1 class="title">
-      🚧 Under Construction
+      Website is Coming Soon
     </h1>
 
     <p class="desc">
-      Bhai... thoda patience rakho 😌  
-      <strong>jitubanna.com</strong> abhi build ho rahi hai full premium level pe.  
-      Jaldi hi ek solid, next-gen experience launch hone wala hai.
+      Bhai… thoda patience rakho 😌  
+      <strong>jitubanna.com</strong> abhi carefully craft ho rahi hai.  
+      Jaldi hi ek clean, fast aur next-level experience launch hoga.
     </p>
 
     <p class="thanks">
-      ❤️ Thanks for waiting, legend.
+      ❤️ Thanks for your patience
     </p>
 
     <div class="divider"></div>
 
     <p class="subtext">
-      Tab tak ye explore kar lo 👇
+      Tab tak ye check kar lo 👇
     </p>
 
-    <!-- NORMAL LINKS -->
-    <a href="https://me.jitubanna.com" target="_blank" class="link">
-      🔗 me.jitubanna.com
-    </a>
+    <!-- LINKS -->
+    <div class="links">
+      <a href="https://me.jitubanna.com" target="_blank" class="link">
+        🔗 me.jitubanna.com
+      </a>
 
-    <a href="https://wikipedia.jitubanna.com" target="_blank" class="link">
-      📚 wikipedia.jitubanna.com
-    </a>
+      <a href="https://wikipedia.jitubanna.com" target="_blank" class="link">
+        📚 wikipedia.jitubanna.com
+      </a>
+    </div>
 
     <!-- SPECIAL BUTTON -->
     <a href="https://jssoriginals.in" target="_blank" class="special">
-      ⚡ Visit JSS Originals
+      ⚡ Explore JSS Originals
     </a>
 
     <p class="note">
-      In sabka upgraded version bhi jaldi aa raha hai 🔥
+      In sabka upgraded version bhi jaldi aa raha hai 🚀
     </p>
 
   </div>
@@ -52,11 +55,12 @@
 </div>
 
 <style>
+
   :global(body) {
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
-    background: #020617;
-    color: #e2e8f0;
+    background: #f8fafc;
+    color: #0f172a;
     overflow-x: hidden;
   }
 
@@ -65,17 +69,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 16px; /* TOP PADDING HATA DIYA */
+    padding: 0 16px;
     position: relative;
   }
 
-  /* BACKGROUND GLOW */
-  .glow {
+  /* SOFT PREMIUM BACKGROUND */
+  .bg-gradient {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(99,102,241,0.25), transparent);
-    filter: blur(80px);
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(99,102,241,0.15), transparent),
+      radial-gradient(circle at 80% 70%, rgba(34,197,94,0.12), transparent);
     z-index: 0;
   }
 
@@ -87,31 +91,40 @@
     max-width: 420px;
     padding: 22px;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(16px);
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(14px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
 
-    box-shadow: 
-      0 10px 30px rgba(0,0,0,0.6),
-      inset 0 1px 0 rgba(255,255,255,0.05);
+    box-shadow:
+      0 10px 30px rgba(0,0,0,0.08),
+      inset 0 1px 0 rgba(255,255,255,0.6);
 
     text-align: center;
   }
 
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(99,102,241,0.1);
+    color: #4f46e5;
+    margin-bottom: 10px;
+  }
+
   .title {
     font-size: 22px;
-    margin-bottom: 10px;
-    letter-spacing: normal; /* bhai tension na le 😏 */
+    margin-bottom: 8px;
   }
 
   .desc {
     font-size: 14px;
     line-height: 1.6;
-    color: #cbd5f5;
-    margin-bottom: 12px;
+    color: #475569;
+    margin-bottom: 10px;
   }
 
   .thanks {
@@ -122,43 +135,49 @@
 
   .divider {
     height: 1px;
-    background: rgba(255,255,255,0.08);
+    background: rgba(0,0,0,0.06);
     margin: 16px 0;
   }
 
   .subtext {
     font-size: 13px;
-    color: #94a3b8;
+    color: #64748b;
     margin-bottom: 10px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .link {
     display: block;
-    margin: 6px 0;
     padding: 10px;
     border-radius: 10px;
 
     text-decoration: none;
-    color: white;
+    color: #0f172a;
     font-size: 14px;
 
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.05);
 
     transition: all 0.2s ease;
   }
 
   .link:hover {
     transform: translateY(-2px);
-    background: rgba(255,255,255,0.1);
+    background: white;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
   }
 
-  /* SPECIAL BUTTON (VIP ENTRY 🔥) */
+  /* HERO BUTTON 🔥 */
   .special {
     display: block;
-    margin-top: 12px;
-    padding: 12px;
-    border-radius: 12px;
+    margin-top: 14px;
+    padding: 13px;
+    border-radius: 14px;
 
     text-decoration: none;
     font-size: 15px;
@@ -167,23 +186,22 @@
 
     background: linear-gradient(135deg, #6366f1, #22c55e);
 
-    box-shadow: 0 6px 20px rgba(34,197,94,0.35);
+    box-shadow: 0 8px 24px rgba(34,197,94,0.3);
 
     transition: all 0.25s ease;
   }
 
   .special:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(34,197,94,0.5);
+    box-shadow: 0 12px 30px rgba(34,197,94,0.45);
   }
 
   .note {
     margin-top: 12px;
     font-size: 12px;
-    color: #94a3b8;
+    color: #64748b;
   }
 
-  /* DESKTOP UPGRADE */
   @media (min-width: 768px) {
     .card {
       padding: 30px;
@@ -197,4 +215,5 @@
       font-size: 15px;
     }
   }
+
 </style>

@@ -1,4 +1,4 @@
-<!-- src/lib/components/layout/Footer.svelte -->
+// src/lib/components/layout/Footer.svelte
 
 <script>
   import Container from "./Container.svelte";
@@ -61,18 +61,21 @@
 </footer>
 
 <style>
+
   .footer {
     margin-top: 80px;
     padding-top: 48px;
     padding-bottom: 36px;
 
-    border-top: 1px solid var(--border-subtle);
+    background: #f8fafc;
+
+    border-top: 1px solid rgba(0,0,0,0.06);
   }
 
   .footer-inner {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
     align-items: center;
     text-align: center;
   }
@@ -84,9 +87,10 @@
   }
 
   .footer-desc {
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
+    font-size: 13px;
+    color: #64748b;
     max-width: 320px;
+    line-height: 1.5;
   }
 
   .footer-social {
@@ -94,9 +98,24 @@
     gap: 12px;
   }
 
+  /* ICON BUTTON UPGRADE 😏 */
+  .footer-social a :global(button) {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(0,0,0,0.06);
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+    transition: all 0.2s ease;
+  }
+
+  .footer-social a :global(button:hover) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
   .footer-bottom {
-    font-size: var(--text-xs);
-    color: var(--text-muted);
+    font-size: 12px;
+    color: #94a3b8;
   }
 
   @media (max-width: 480px) {
@@ -105,4 +124,5 @@
       padding-bottom: 32px;
     }
   }
+
 </style>

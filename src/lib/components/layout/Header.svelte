@@ -1,27 +1,15 @@
-<!-- src/lib/components/layout/Header.svelte -->
+// src/lib/components/layout/Header.svelte
 
 <script>
   import { onMount } from "svelte";
 
   import Container from "./Container.svelte";
   import HamburgerButton from "./HamburgerButton.svelte";
-  import IconButton from "../ui/IconButton.svelte";
   import GradientText from "../ui/GradientText.svelte";
-  import { theme } from "../../stores/theme";
-  import { Sun, Moon } from "lucide-svelte";
 
   export let title = "Jitendra Singh";
 
-  let currentTheme = "dark";
   let scrolled = false;
-
-  const unsubscribe = theme.subscribe((t) => {
-    currentTheme = t;
-  });
-
-  function toggleTheme() {
-    theme.toggleTheme();
-  }
 
   function handleScroll() {
     scrolled = window.scrollY > 8;
@@ -33,7 +21,6 @@
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      unsubscribe();
     };
   });
 </script>
@@ -51,23 +38,19 @@
 
       <!-- Actions -->
       <div class="actions">
-
-        <IconButton
-          icon={currentTheme === "dark" ? Sun : Moon}
-          label="Toggle theme"
-          variant="glass"
-          size="md"
-          on:click={toggleTheme}
-        />
-
         <HamburgerButton />
-
       </div>
+
     </div>
   </Container>
 </header>
 
 <style>
+
+  :global(body) {
+    background: #f8fafc;
+    color: #0f172a;
+  }
 
   .header {
     position: sticky;
@@ -76,7 +59,7 @@
 
     width: 100%;
 
-    background: transparent;
+    background: rgba(255, 255, 255, 0.7);
 
     backdrop-filter: blur(0px);
     -webkit-backdrop-filter: blur(0px);
@@ -86,18 +69,21 @@
     transition:
       background 0.25s ease,
       backdrop-filter 0.25s ease,
-      border-color 0.25s ease;
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
   }
 
-  /* SCROLLED STATE */
+  /* SCROLLED STATE (premium glass feel 😏) */
 
   .header.scrolled {
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
 
-    background: rgba(10, 10, 12, 0.55);
+    background: rgba(255, 255, 255, 0.85);
 
-    border-bottom: 1px solid var(--border-subtle);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   }
 
   .header-inner {
@@ -111,7 +97,6 @@
   .logo {
     font-size: 18px;
     font-weight: 600;
-    letter-spacing: -0.01em;
   }
 
   .actions {
