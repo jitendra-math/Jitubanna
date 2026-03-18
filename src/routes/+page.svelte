@@ -1,3 +1,5 @@
+// src/routes/+page.svelte
+
 <script>
 </script>
 
@@ -69,18 +71,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 16px;
+    padding: 0 16px; /* tight top */
     position: relative;
   }
 
-  /* SOFT PREMIUM BACKGROUND */
+  /* PREMIUM BACKGROUND */
   .bg-gradient {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 20% 30%, rgba(99,102,241,0.15), transparent),
-      radial-gradient(circle at 80% 70%, rgba(34,197,94,0.12), transparent);
+      radial-gradient(circle at 15% 25%, rgba(99,102,241,0.18), transparent),
+      radial-gradient(circle at 85% 75%, rgba(34,197,94,0.15), transparent);
     z-index: 0;
+    animation: floatBg 10s ease-in-out infinite alternate;
+  }
+
+  @keyframes floatBg {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
   }
 
   .card {
@@ -93,16 +105,24 @@
 
     border-radius: 20px;
 
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(14px);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(16px);
 
     border: 1px solid rgba(0,0,0,0.05);
 
     box-shadow:
-      0 10px 30px rgba(0,0,0,0.08),
+      0 12px 40px rgba(0,0,0,0.08),
       inset 0 1px 0 rgba(255,255,255,0.6);
 
     text-align: center;
+
+    animation: floatCard 4s ease-in-out infinite;
+  }
+
+  @keyframes floatCard {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
   }
 
   .badge {
@@ -110,7 +130,7 @@
     font-size: 12px;
     padding: 6px 10px;
     border-radius: 999px;
-    background: rgba(99,102,241,0.1);
+    background: rgba(99,102,241,0.12);
     color: #4f46e5;
     margin-bottom: 10px;
   }
@@ -160,7 +180,7 @@
     color: #0f172a;
     font-size: 14px;
 
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
     border: 1px solid rgba(0,0,0,0.05);
 
     transition: all 0.2s ease;
@@ -169,7 +189,7 @@
   .link:hover {
     transform: translateY(-2px);
     background: white;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
   }
 
   /* HERO BUTTON 🔥 */
@@ -186,14 +206,14 @@
 
     background: linear-gradient(135deg, #6366f1, #22c55e);
 
-    box-shadow: 0 8px 24px rgba(34,197,94,0.3);
+    box-shadow: 0 10px 28px rgba(34,197,94,0.35);
 
     transition: all 0.25s ease;
   }
 
   .special:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(34,197,94,0.45);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 14px 36px rgba(34,197,94,0.45);
   }
 
   .note {
