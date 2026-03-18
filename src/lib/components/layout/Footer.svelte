@@ -1,4 +1,3 @@
-// src/lib/components/layout/Footer.svelte
 
 <script>
   import Container from "./Container.svelte";
