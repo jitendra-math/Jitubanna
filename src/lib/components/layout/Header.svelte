@@ -1,4 +1,3 @@
-// src/lib/components/layout/Header.svelte
 
 <script>
   import { onMount } from "svelte";
