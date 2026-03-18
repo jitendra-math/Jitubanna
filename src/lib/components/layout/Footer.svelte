@@ -22,7 +22,7 @@
       <!-- Branding -->
       <div class="footer-brand">
         <GradientText tag="span" gradient="primary" weight="bold">
-          jitubanna.in
+          Jitendra Singh Nimod 
         </GradientText>
 
         <p class="footer-desc">
