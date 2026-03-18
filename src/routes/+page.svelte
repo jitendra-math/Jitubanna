@@ -1,4 +1,3 @@
-// src/routes/+page.svelte
 
 <script>
 </script>
@@ -6,51 +5,36 @@
 <div class="wrapper">
 
   <!-- BACKGROUND -->
-  <div class="bg-gradient"></div>
+  <div class="bg"></div>
 
-  <div class="card">
+  <div class="content">
 
-    <div class="badge">🚧 Work in Progress</div>
+    <div class="badge">Coming Soon</div>
 
     <h1 class="title">
-      Website is Coming Soon
+      jitubanna.com
     </h1>
 
-    <p class="desc">
-      Bhai… thoda patience rakho 😌  
-      <strong>jitubanna.com</strong> abhi carefully craft ho rahi hai.  
-      Jaldi hi ek clean, fast aur next-level experience launch hoga.
+    <p class="subtitle">
+      A new digital experience is being crafted.  
+      Clean. Fast. Purposeful.
     </p>
 
-    <p class="thanks">
-      ❤️ Thanks for your patience
-    </p>
-
-    <div class="divider"></div>
-
-    <p class="subtext">
-      Tab tak ye check kar lo 👇
-    </p>
-
-    <!-- LINKS -->
-    <div class="links">
-      <a href="https://me.jitubanna.com" target="_blank" class="link">
-        🔗 me.jitubanna.com
-      </a>
-
-      <a href="https://wikipedia.jitubanna.com" target="_blank" class="link">
-        📚 wikipedia.jitubanna.com
-      </a>
-    </div>
-
-    <!-- SPECIAL BUTTON -->
-    <a href="https://jssoriginals.in" target="_blank" class="special">
-      ⚡ Explore JSS Originals
+    <!-- MAIN CTA -->
+    <a href="https://jssoriginals.in" target="_blank" class="cta-primary">
+      Explore JSS Originals →
     </a>
 
-    <p class="note">
-      In sabka upgraded version bhi jaldi aa raha hai 🚀
-    </p>
+    <!-- SECONDARY LINKS -->
+    <div class="links">
+      <a href="https://me.jitubanna.com" target="_blank">
+        me.jitubanna.com
+      </a>
+
+      <a href="https://wikipedia.jitubanna.com" target="_blank">
+        wikipedia.jitubanna.com
+      </a>
+    </div>
 
   </div>
 
@@ -61,178 +45,118 @@
   :global(body) {
     margin: 0;
     font-family: system-ui, -apple-system, sans-serif;
-    background: #f8fafc;
+    background: #ffffff;
     color: #0f172a;
-    overflow-x: hidden;
+  }
+
+  /* REMOVE ALL TOP GAP 🔥 */
+  :global(.home-page),
+  :global(main) {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 
   .wrapper {
-    min-height: 100vh;
+    min-height: calc(100vh - 64px); /* navbar height adjust */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 16px; /* tight top */
+    padding: 0 16px;
     position: relative;
+    overflow: hidden;
   }
 
-  /* PREMIUM BACKGROUND */
-  .bg-gradient {
+  /* RICH GRADIENT BACKGROUND 🌈 */
+  .bg {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 15% 25%, rgba(99,102,241,0.18), transparent),
-      radial-gradient(circle at 85% 75%, rgba(34,197,94,0.15), transparent);
+      radial-gradient(circle at 20% 20%, rgba(99,102,241,0.25), transparent 40%),
+      radial-gradient(circle at 80% 30%, rgba(236,72,153,0.2), transparent 40%),
+      radial-gradient(circle at 50% 80%, rgba(34,197,94,0.2), transparent 40%);
+    filter: blur(60px);
     z-index: 0;
-    animation: floatBg 10s ease-in-out infinite alternate;
   }
 
-  @keyframes floatBg {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-20px);
-    }
-  }
-
-  .card {
+  .content {
     position: relative;
     z-index: 1;
-
-    width: 100%;
-    max-width: 420px;
-    padding: 22px;
-
-    border-radius: 20px;
-
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(16px);
-
-    border: 1px solid rgba(0,0,0,0.05);
-
-    box-shadow:
-      0 12px 40px rgba(0,0,0,0.08),
-      inset 0 1px 0 rgba(255,255,255,0.6);
-
     text-align: center;
-
-    animation: floatCard 4s ease-in-out infinite;
-  }
-
-  @keyframes floatCard {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0px); }
+    max-width: 420px;
+    width: 100%;
   }
 
   .badge {
     display: inline-block;
     font-size: 12px;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 999px;
-    background: rgba(99,102,241,0.12);
+    background: rgba(99,102,241,0.1);
     color: #4f46e5;
-    margin-bottom: 10px;
-  }
-
-  .title {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-
-  .desc {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #475569;
-    margin-bottom: 10px;
-  }
-
-  .thanks {
-    font-size: 14px;
-    font-weight: 600;
     margin-bottom: 14px;
   }
 
-  .divider {
-    height: 1px;
-    background: rgba(0,0,0,0.06);
-    margin: 16px 0;
-  }
-
-  .subtext {
-    font-size: 13px;
-    color: #64748b;
+  .title {
+    font-size: 28px;
+    font-weight: 700;
     margin-bottom: 10px;
   }
 
-  .links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  .subtitle {
+    font-size: 15px;
+    color: #475569;
+    margin-bottom: 22px;
+    line-height: 1.5;
   }
 
-  .link {
-    display: block;
-    padding: 10px;
-    border-radius: 10px;
-
-    text-decoration: none;
-    color: #0f172a;
-    font-size: 14px;
-
-    background: rgba(255,255,255,0.95);
-    border: 1px solid rgba(0,0,0,0.05);
-
-    transition: all 0.2s ease;
-  }
-
-  .link:hover {
-    transform: translateY(-2px);
-    background: white;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-  }
-
-  /* HERO BUTTON 🔥 */
-  .special {
-    display: block;
-    margin-top: 14px;
-    padding: 13px;
-    border-radius: 14px;
+  /* MAIN BUTTON 🔥 (ab asli hero) */
+  .cta-primary {
+    display: inline-block;
+    padding: 14px 18px;
+    border-radius: 12px;
 
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
     color: white;
 
-    background: linear-gradient(135deg, #6366f1, #22c55e);
+    background: linear-gradient(135deg, #6366f1, #ec4899);
 
-    box-shadow: 0 10px 28px rgba(34,197,94,0.35);
+    box-shadow: 0 10px 30px rgba(99,102,241,0.35);
 
     transition: all 0.25s ease;
   }
 
-  .special:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 14px 36px rgba(34,197,94,0.45);
+  .cta-primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(99,102,241,0.45);
   }
 
-  .note {
-    margin-top: 12px;
-    font-size: 12px;
+  .links {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .links a {
+    font-size: 13px;
     color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .links a:hover {
+    color: #0f172a;
   }
 
   @media (min-width: 768px) {
-    .card {
-      padding: 30px;
-    }
-
     .title {
-      font-size: 26px;
+      font-size: 34px;
     }
 
-    .desc {
-      font-size: 15px;
+    .subtitle {
+      font-size: 16px;
     }
   }
 
