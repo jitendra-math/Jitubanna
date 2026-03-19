@@ -1,4 +1,3 @@
-// src/routes/+page.svelte
 
 <script>
 </script>
@@ -10,15 +9,15 @@
 
   <div class="content">
 
-    <div class="badge">Coming Soon</div>
+    <div class="badge">Official Website</div>
 
     <h1 class="title">
       jitubanna.com
     </h1>
 
     <p class="subtitle">
-      A new digital experience is being crafted.  
-      Clean. Fast. Purposeful.
+      jitubanna.com is the official digital identity of Jitendra Singh Nimod (Jitu Banna), a web developer from Rajasthan.  
+      This platform represents personal branding, development work, blogs, and digital presence across the internet.
     </p>
 
     <!-- MAIN CTA -->
@@ -29,12 +28,26 @@
     <!-- SECONDARY LINKS -->
     <div class="links">
       <a href="https://me.jitubanna.com" target="_blank">
-        me.jitubanna.com
+        Visit personal profile →
       </a>
 
       <a href="https://wikipedia.jitubanna.com" target="_blank">
-        wikipedia.jitubanna.com
+        View identity pages →
       </a>
+    </div>
+
+    <!-- EXTRA CONTENT (AdSense boost 💸) -->
+    <div class="info">
+      <h2>About This Website</h2>
+      <p>
+        This website is being developed as a central hub for showcasing projects, blogs, and digital identity.  
+        It will include detailed content related to web development, modern technologies, and practical insights for developers.
+      </p>
+
+      <p>
+        The goal of jitubanna.com is to create a clean, fast, and useful platform that provides real value through content,  
+        helping users learn, explore, and connect with modern digital solutions.
+      </p>
     </div>
 
   </div>
@@ -50,7 +63,6 @@
     color: #0f172a;
   }
 
-  /* REMOVE ALL TOP GAP 🔥 */
   :global(.home-page),
   :global(main) {
     padding-top: 0 !important;
@@ -58,16 +70,15 @@
   }
 
   .wrapper {
-    min-height: calc(100vh - 64px); /* navbar height adjust */
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 16px;
+    padding: 20px 16px;
     position: relative;
     overflow: hidden;
   }
 
-  /* RICH GRADIENT BACKGROUND 🌈 */
   .bg {
     position: absolute;
     inset: 0;
@@ -83,7 +94,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 420px;
+    max-width: 500px;
     width: 100%;
   }
 
@@ -98,7 +109,7 @@
   }
 
   .title {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     margin-bottom: 10px;
   }
@@ -107,10 +118,9 @@
     font-size: 15px;
     color: #475569;
     margin-bottom: 22px;
-    line-height: 1.5;
+    line-height: 1.6;
   }
 
-  /* MAIN BUTTON 🔥 (ab asli hero) */
   .cta-primary {
     display: inline-block;
     padding: 14px 18px;
@@ -129,7 +139,7 @@
   }
 
   .cta-primary:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px);
     box-shadow: 0 16px 40px rgba(99,102,241,0.45);
   }
 
@@ -144,16 +154,32 @@
     font-size: 13px;
     color: #64748b;
     text-decoration: none;
-    transition: color 0.2s ease;
   }
 
   .links a:hover {
     color: #0f172a;
   }
 
+  .info {
+    margin-top: 32px;
+    text-align: left;
+  }
+
+  .info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .info p {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
   @media (min-width: 768px) {
     .title {
-      font-size: 34px;
+      font-size: 36px;
     }
 
     .subtitle {
