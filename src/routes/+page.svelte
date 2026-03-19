@@ -1,3 +1,4 @@
+// src/routes/+page.svelte
 
 <script>
 </script>
